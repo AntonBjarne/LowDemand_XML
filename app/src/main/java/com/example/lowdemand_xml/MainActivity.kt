@@ -26,8 +26,9 @@ class MainActivity : AppCompatActivity() {
 
         spinner.adapter = adapter
 
-        val showDropdownButton: Button = findViewById(R.id.button1)
-        showDropdownButton.setOnClickListener {
+        spinner.prompt = ""
+
+        spinner.setOnClickListener {
             spinner.performClick()
         }
     }

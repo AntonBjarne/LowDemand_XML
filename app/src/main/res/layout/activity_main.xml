@@ -21,23 +21,14 @@
             android:text="@string/app_title"
             android:textSize="32sp" />
 
-        <Button
-            android:id="@+id/button1"
-            style="?attr/materialIconButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleX="2"
-            android:scaleY="2"
-            app:icon="@drawable/burger_menu"
-            app:layout_constraintEnd_toEndOf="parent" />
-
         <Spinner
             android:id="@+id/spinner"
+            android:background="@drawable/burger_menu"
             android:spinnerMode="dropdown"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button1"/>
+            android:gravity="center"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
