@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#BCBCBC">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint0"
@@ -19,16 +20,29 @@
             android:layout_height="wrap_content"
             android:clickable="false"
             android:text="@string/app_title"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            tools:ignore="MissingConstraints" />
 
-        <Spinner
-            android:id="@+id/spinner"
+        <Button
+            android:id="@+id/dropdown_button"
             android:background="@drawable/burger_menu"
-            android:spinnerMode="dropdown"
             android:gravity="center"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:spinnerMode="dropdown"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#bcbcbc"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="@id/dropdown_button"
+            app:layout_constraintStart_toStartOf="@id/dropdown_button"
+            android:visibility="invisible"
+            tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -46,7 +60,8 @@
             android:layout_height="0dp"
             android:scaleType="centerCrop"
             android:src="@drawable/photo3"
-            app:layout_constraintDimensionRatio="1052:714" />
+            app:layout_constraintDimensionRatio="1052:714"
+            tools:ignore="ContentDescription,MissingConstraints" />
 
         <TextView
             android:id="@+id/firstPostTitle"
@@ -81,7 +96,8 @@
             android:layout_height="0dp"
             android:scaleType="centerCrop"
             android:src="@drawable/photo4"
-            app:layout_constraintDimensionRatio="1052:714" />
+            app:layout_constraintDimensionRatio="1052:714"
+            tools:ignore="ContentDescription,MissingConstraints" />
 
         <TextView
             android:id="@+id/secondPostTitle"
